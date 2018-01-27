@@ -1,36 +1,23 @@
 
-# BigBlueButton API  Wrapper for Laravel 5.3
-
+# BigBlueButton API  Wrapper for Laravel 
+This is a laravel wrapper for BigBlueButton API
 ## Requirements
 
 - Laravel 5.3 or above.
-
 
 ## Installation
 
 Require package in your composer.json and update composer.  This downloads the package and the official bigbluebutton php library. 
 
 ```
-composer require bigbluebutton/bigbluebutton-api-php:dev-master
+composer require abiodunjames/bigbluebutton
 ```
 
-or by editing [Composer][composer].json
-
-```json
-{
-    "require": {
-        "bigbluebutton/bigbluebutton-api-php": "dev-master"
-    }
-}
-```
 After updating composer, add the ServiceProvider to the providers array in config/app.php
-
 ```
  Abiodunjames\Bigbluebutton\BigbluebuttonProviderService::class,
 ```
-
 You can optionally use the facade for shorter code. Add this to your facades:
-
 ```
 'Meeting' => Abiodunjames\Bigbluebutton\BigbluebuttonMeeting::class,
 ```
@@ -40,8 +27,7 @@ You can optionally use the facade for shorter code. Add this to your facades:
 You can define Big blue button secret key and server url in two ways. 
 1. Define in .env file
 
- ```BBB_SECURITY_SALT =bbb_secret_key``` 
- 
+ ```BBB_SECURITY_SALT =bbb_secret_key```  
  ```BBB_SERVER_BASE_URL=https://example.com/bigbluebutton/``` 
  
  2. Define in config/bigbluebutton.php
@@ -53,7 +39,7 @@ You can define Big blue button secret key and server url in two ways.
 
 ## Via Dependency Injection in Controller
 **List all meetings**
-```
+```php
 namespace App\Http\Controllers;
 class MeetingController extends Controller
 {
@@ -79,9 +65,7 @@ class MeetingController extends Controller
 
 ```
 **Create meeting**
-```
-namespace App\Http\Controllers;
-
+```php
 use Abiodunjames\Bigbluebutton\Contracts\Meeting;
 use BigBlueButton\Parameters\CreateMeetingParameters;
 use Illuminate\Http\Request;
@@ -117,11 +101,7 @@ class MeetingController extends Controller
 
 ```
 **Join a meeting**
-```
-<?php
-
-namespace App\Http\Controllers;
-
+```php
 use Abiodunjames\Bigbluebutton\Contracts\Meeting;
 use BigBlueButton\Parameters\JoinMeetingParameters;
 use Illuminate\Http\Request;
@@ -155,10 +135,7 @@ class MeetingController extends Controller
 
 ```
 **Close meeting**
-```
-<?php
-
-namespace App\Http\Controllers;
+```php
 
 use Abiodunjames\Bigbluebutton\Contracts\Meeting;
 use BigBlueButton\Parameters\EndMeetingParameters;
@@ -189,10 +166,9 @@ class MeetingController extends Controller
     }
 }
 
-
 ```
 ## Via Laravel Facade
 You can also manage meetings using the facade
-```
+```php
 Meeting::all(); //get a list of all meetings
 ```
