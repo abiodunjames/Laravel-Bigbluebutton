@@ -1,8 +1,8 @@
 {
-    "name": "abiodunjames/bigbluebuttom",
-    "description": "Big blue button wrapper",
+    "name": "abiodunjames/bigbluebutton",
+    "description": "Bigbluebutton wrapper for laravel 5",
     "license": "MIT",
-    "keywords": ["laravel", "bigbluebutton", "video","audio"],
+    "keywords": ["laravel", "bigbluebutton", "wrapper"],
     "authors": [
         {
             "name": "Samuel James",
