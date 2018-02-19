@@ -3,7 +3,7 @@
 This is a laravel wrapper for BigBlueButton API
 ## Requirements
 
-- Laravel 5.3 or above.
+- Laravel 5.4
 
 ## Installation
 
@@ -14,11 +14,11 @@ composer require abiodunjames/bigbluebutton
 ```
 
 After updating composer, add the ServiceProvider to the providers array in config/app.php
-```
+```php
  Abiodunjames\Bigbluebutton\BigbluebuttonProviderService::class,
 ```
 You can optionally use the facade for shorter code. Add this to your facades:
-```
+```php
 'Meeting' => Abiodunjames\Bigbluebutton\BigbluebuttonMeeting::class,
 ```
 
