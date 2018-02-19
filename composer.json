@@ -1,29 +1,40 @@
 {
-    "name": "abiodunjames/bigbluebutton",
-    "description": "Bigbluebutton wrapper for laravel 5",
-    "license": "MIT",
-    "keywords": ["laravel", "bigbluebutton", "wrapper"],
-    "authors": [
-        {
-            "name": "Samuel James",
-            "email": "samuel4abiodun@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.6.4",
-        "laravel/framework": "5.4.*",
-        "bigbluebutton/bigbluebutton-api-php": "dev-master"
-
+  "name": "abiodunjames/bigbluebutton",
+  "description": "Bigbluebutton wrapper for laravel 5",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "bigbluebutton",
+    "wrapper"
+  ],
+  "authors": [
+    {
+      "name": "Samuel James",
+      "email": "samuel4abiodun@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "laravel/framework": "5.5.*",
+    "bigbluebutton/bigbluebutton-api-php": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Abiodunjames\\Bigbluebutton\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Abiodunjames\\Bigbluebutton\\BigbluebuttonProviderService"
+      ],
+      "aliases": {
+        "Meeting": "Abiodunjames\\Bigbluebutton\\BigbluebuttonMeeting"
+      }
     },
-    "autoload": {
-        "psr-4": {
-            "Abiodunjames\\Bigbluebutton\\":"src/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.5-dev"
-        }
-    },
-    "minimum-stability": "dev"
+    "branch-alias": {
+      "dev-master": "0.5-dev"
+    }
+  },
+  "minimum-stability": "dev"
 }
