@@ -41,6 +41,7 @@ You can define Big blue button secret key and server url in two ways.
 **List all meetings**
 ```php
 namespace App\Http\Controllers;
+
 class MeetingController extends Controller
 {
     /**
@@ -52,6 +53,7 @@ class MeetingController extends Controller
     {
         $this->meeting = $meeting;
     }
+    
     /**
      *  Returns a list of meetings
      */
@@ -82,7 +84,7 @@ class MeetingController extends Controller
         $this->meeting = $meeting;
     }
 
-    /**
+        /**
          * Create a bigbluebutton meeting
          *
          * @param \Illuminate\Http\Request $request
@@ -117,6 +119,7 @@ class MeetingController extends Controller
     {
         $this->meeting = $meeting;
     }
+    
     /**
      *  Join a bigbluebutton meeting
      *
